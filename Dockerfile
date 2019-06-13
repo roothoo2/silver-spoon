@@ -8,7 +8,9 @@ RUN apt-get -y update && apt-get -y upgrade && apt-get -y dist-upgrade
 RUN apt-get install -y build-essential qemu-system-x86 gdb make gcc-multilib g++-multilib apt-transport-https wget
 
 # use fantastic gbd config in https://github.com/cyrus-and/gdb-dashboard
-RUN wget -P /root git.io/.gdbinit
+
+#RUN wget -P /root git.io/.gdbinit
+#RUN wget -P /root https://raw.githubusercontent.com/cyrus-and/gdb-dashboard/master/.gdbinit
 
 WORKDIR /usr/src/app
 
